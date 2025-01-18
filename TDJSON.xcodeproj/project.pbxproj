@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5212371B2D3B1C80004D7DA4 /* libtdapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5212371A2D3B1C80004D7DA4 /* libtdapi.a */; };
 		B30C1CAE2090EC67000F36F3 /* td_json_client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C1CAD2090EC67000F36F3 /* td_json_client.swift */; };
 		B318C842228D6F0B009C4FD7 /* TDJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = B318C840228CAFC9009C4FD7 /* TDJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3474A2D2090D808000635C3 /* libtdutils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3474A222090D808000635C3 /* libtdutils.a */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5212371A2D3B1C80004D7DA4 /* libtdapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtdapi.a; path = lib/libtdapi.a; sourceTree = "<group>"; };
 		B30C1CAD2090EC67000F36F3 /* td_json_client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = td_json_client.swift; sourceTree = "<group>"; };
 		B30C1CAF2090EE0A000F36F3 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = SOURCE_ROOT; };
 		B318C840228CAFC9009C4FD7 /* TDJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDJSON.h; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				B3474A392090D817000635C3 /* libc++.tbd in Frameworks */,
 				B3474A2D2090D808000635C3 /* libtdutils.a in Frameworks */,
 				B3474A2E2090D808000635C3 /* libtdactor.a in Frameworks */,
+				5212371B2D3B1C80004D7DA4 /* libtdapi.a in Frameworks */,
 				B3474A2F2090D808000635C3 /* libtdcore.a in Frameworks */,
 				B3474A302090D808000635C3 /* libcrypto.a in Frameworks */,
 				B3474A312090D808000635C3 /* libtdjson_static.a in Frameworks */,
@@ -103,6 +106,7 @@
 		B3474A212090D808000635C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5212371A2D3B1C80004D7DA4 /* libtdapi.a */,
 				B3474A3A2090D81E000635C3 /* libz.tbd */,
 				B3474A382090D817000635C3 /* libc++.tbd */,
 				B3474A252090D808000635C3 /* libcrypto.a */,
@@ -370,7 +374,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leomehlig.TDJSON;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -407,7 +413,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)",
 				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leomehlig.TDJSON;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
